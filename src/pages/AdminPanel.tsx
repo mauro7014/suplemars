@@ -478,7 +478,7 @@ export function AdminPanel() {
                     onChange={function(e) { setNewProduct({ ...newProduct, category: e.target.value as Product['category'] }) }}
                     className="w-full bg-cream border border-sand px-4 py-3 font-sans text-sm text-ink focus:outline-none focus:border-bark"
                   >
-                    {['vestidos','blusas','pantalones','faldas','abrigos','accesorios'].map(function(c) {
+                    {['proteinas','creatinas','pre-entreno','colageno','quemadores','aminoacidos','barritas','varios'].map(function(c) {
                       return <option key={c} value={c}>{c}</option>
                     })}
                   </select>
