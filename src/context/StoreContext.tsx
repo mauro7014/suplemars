@@ -26,24 +26,24 @@ interface StoreContextValue {
 
 const defaultStore: StoreState = {
   products: initialProducts,
-  heroImage: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80',
-  heroTitle: 'RICATIPA',
-  heroSubtitle: 'Moda artesanal y sostenible',
-  heroTag: 'Nueva colección',
-  materialesTexto: 'En RICATIPA trabajamos exclusivamente con materiales naturales y sostenibles. Cada fibra es elegida por su calidad, su origen ético y su impacto mínimo en el medio ambiente.',
-  materialesHero: 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600&q=80',
-  nosotrasTexto: 'RICATIPA nació en Rosario, Argentina, de las manos de Romina — diseñadora, artesana y soñadora. Lo que empezó como un proyecto personal se convirtió en una marca que celebra la moda lenta, el trabajo artesanal y la belleza de lo natural.',
-  nosotrasHero: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1600&q=80',
-  nosotrasQuote: 'Quiero que cada mujer que use una prenda RICATIPA sienta que lleva consigo un pedazo de historia, de tierra y de amor.',
+  heroImage: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80',
+  heroTitle: 'SUPLEMARS',
+  heroSubtitle: 'Suplementos deportivos de alta performance',
+  heroTag: 'Nueva coleccion',
+  materialesTexto: 'En Suplemars trabajamos con los mejores laboratorios del mundo para traerte suplementos de la mas alta calidad.',
+  materialesHero: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&q=80',
+  nosotrasTexto: 'Suplemars nacio en Rosario con un objetivo claro: llevar suplementos de calidad profesional a todos los deportistas argentinos.',
+  nosotrasHero: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1600&q=80',
+  nosotrasQuote: 'Cada rep cuenta. Cada suplemento importa. Suplemars es tu aliado.',
   galeriaImages: [
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80',
-    'https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=400&q=80',
-    'https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&q=80',
-    'https://images.unsplash.com/photo-1544022613-e87ca75a784a?w=400&q=80',
-    'https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&q=80',
-    'https://images.unsplash.com/photo-1475180429745-7b1a22bc92d0?w=400&q=80',
-    'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&q=80',
-    'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&q=80',
+    'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&q=80',
+    'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80',
+    'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&q=80',
+    'https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400&q=80',
+    'https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=400&q=80',
+    'https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=400&q=80',
+    'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400&q=80',
+    'https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=400&q=80',
   ],
 }
 
@@ -52,21 +52,21 @@ const StoreContext = createContext<StoreContextValue | null>(null)
 export function StoreProvider({ children }: { children: ReactNode }) {
   const [store, setStore] = useState<StoreState>(function() {
     try {
-      const saved = localStorage.getItem('ricatipa_store')
+      const saved = localStorage.getItem('suplemars_store')
       if (saved) return JSON.parse(saved)
-    } catch {}
+    } catch(e) {}
     return defaultStore
   })
 
   useEffect(function() {
-    localStorage.setItem('ricatipa_store', JSON.stringify(store))
+    localStorage.setItem('suplemars_store', JSON.stringify(store))
   }, [store])
 
-  function updateStore(updates: Partial<StoreState>) {
+  function updateStore(updates) {
     setStore(function(prev) { return { ...prev, ...updates } })
   }
 
-  function updateProduct(product: Product) {
+  function updateProduct(product) {
     setStore(function(prev) {
       return {
         ...prev,
@@ -77,7 +77,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     })
   }
 
-  function addProduct(product: Product) {
+  function addProduct(product) {
     setStore(function(prev) {
       return { ...prev, products: [...prev.products, product] }
     })

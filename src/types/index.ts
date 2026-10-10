@@ -1,21 +1,25 @@
 export type ProductCategory =
-  | 'vestidos'
-  | 'blusas'
-  | 'pantalones'
-  | 'accesorios'
-  | 'abrigos'
-  | 'faldas'
+  | 'proteinas'
+  | 'creatinas'
+  | 'pre-entreno'
+  | 'colageno'
+  | 'quemadores'
+  | 'aminoacidos'
+  | 'barritas'
+  | 'varios'
 
 export type ProductMaterial =
-  | 'lino'
-  | 'algodón orgánico'
-  | 'seda natural'
-  | 'lana merino'
-  | 'cáñamo'
-  | 'alpaca'
+  | 'suero de leche'
+  | 'creatina monohidrato'
+  | 'multi-ingrediente'
+  | 'aminoacidos'
+  | 'colageno hidrolizado'
+  | 'cafeina y termogenicos'
+  | 'avena y proteina'
+  | 'varios'
 
 export interface ProductSize {
-  label:     string
+  label: string
   available: boolean
 }
 

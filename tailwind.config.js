@@ -7,39 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        linen:    '#FAF7F2',
-        cream:    '#F2EDE4',
-        sand:     '#E8DDD0',
-        stone:    '#C4B8A8',
-        bark:     '#8C7B6B',
-        earth:    '#5C4A3A',
-        charcoal: '#2C2420',
-        ink:      '#1A1410',
-        copper:   '#B87333',
-        sage:     '#8A9E85',
+        linen:    '#111111',
+        cream:    '#1C1C1C',
+        sand:     '#2A2A2A',
+        stone:    '#666666',
+        bark:     '#999999',
+        earth:    '#CCCCCC',
+        charcoal: '#F0F0F0',
+        ink:      '#FFFFFF',
+        copper:   '#FF6B00',
+        sage:     '#0066CC',
+        gold:     '#F5A623',
       },
       fontFamily: {
-        serif:   ['Cormorant Garamond', 'Georgia', 'serif'],
+        serif:   ['Bebas Neue', 'Impact', 'sans-serif'],
         sans:    ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+        display: ['Bebas Neue', 'Impact', 'sans-serif'],
       },
       fontSize: {
-        'display-xl': ['4.5rem', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
-        'display-lg': ['3.5rem', { lineHeight: '1.1',  letterSpacing: '-0.01em' }],
-        'display-md': ['2.5rem', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
-      },
-      spacing: {
-        '18': '4.5rem',
-        '22': '5.5rem',
-        '30': '7.5rem',
-      },
-      transitionTimingFunction: {
-        'elegant': 'cubic-bezier(0.25, 0.1, 0.25, 1)',
-        'slide':   'cubic-bezier(0.4, 0, 0.2, 1)',
-      },
-      transitionDuration: {
-        '400': '400ms',
-        '600': '600ms',
+        'display-xl': ['4.5rem', { lineHeight: '1.05', letterSpacing: '0.05em' }],
+        'display-lg': ['3.5rem', { lineHeight: '1.1',  letterSpacing: '0.03em' }],
+        'display-md': ['2.5rem', { lineHeight: '1.15', letterSpacing: '0.02em' }],
       },
       keyframes: {
         fadeIn: {
@@ -56,9 +44,9 @@ export default {
         },
       },
       animation: {
-        'fade-in':       'fadeIn 0.4s ease-out forwards',
-        'slide-up':      'slideUp 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards',
-        'slide-in-right':'slideInRight 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards',
+        'fade-in':        'fadeIn 0.4s ease-out forwards',
+        'slide-up':       'slideUp 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards',
+        'slide-in-right': 'slideInRight 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) forwards',
       },
     },
   },
