@@ -62,11 +62,11 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     localStorage.setItem('suplemars_store', JSON.stringify(store))
   }, [store])
 
-  function updateStore(updates) {
+  function updateStore(updates: Partial<StoreState>) {
     setStore(function(prev) { return { ...prev, ...updates } })
   }
 
-  function updateProduct(product) {
+  function updateProduct(product: Product) {
     setStore(function(prev) {
       return {
         ...prev,
@@ -77,7 +77,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     })
   }
 
-  function addProduct(product) {
+  function addProduct(product: Product) {
     setStore(function(prev) {
       return { ...prev, products: [...prev.products, product] }
     })

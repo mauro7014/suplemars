@@ -13,8 +13,8 @@ const emptyProduct: Product = {
   description: '',
   price: 0,
   currency: 'ARS',
-  category: 'vestidos',
-  material: 'lino',
+  category: 'proteinas',
+  material: 'suero de leche',
   sizes: [
     { label: 'XS', available: true },
     { label: 'S',  available: true },
@@ -363,7 +363,7 @@ export function AdminPanel() {
                     onChange={function(e) { setEditing({ ...editing, category: e.target.value as Product['category'] }) }}
                     className="w-full bg-cream border border-sand px-4 py-3 font-sans text-sm text-ink focus:outline-none focus:border-bark"
                   >
-                    {['vestidos','blusas','pantalones','faldas','abrigos','accesorios'].map(function(c) {
+                    {['proteinas','creatinas','pre-entreno','colageno','quemadores','aminoacidos','barritas','varios'].map(function(c) {
                       return <option key={c} value={c}>{c}</option>
                     })}
                   </select>

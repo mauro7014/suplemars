@@ -32,7 +32,7 @@ export const products: Product[] = [
     description: 'Creatina monohidrato micronizada de maxima pureza. Aumenta la fuerza, potencia y masa muscular. Sin sabor, se mezcla facilmente con cualquier bebida. 5g por porcion, 60 porciones por envase.',
     price: 28000,
     currency: 'ARS',
-    category: 'creatina',
+    category: 'creatinas',
     material: 'creatina monohidrato',
     sizes: [
       { label: '300g', available: true },
@@ -100,7 +100,7 @@ export const products: Product[] = [
     description: 'Hipercalorico profesional con 1250 calorias por porcion. 50g de proteina, 250g de carbohidratos complejos y vitaminas esenciales. Ideal para personas con dificultad para ganar peso y masa muscular.',
     price: 55000,
     currency: 'ARS',
-    category: 'gainers',
+    category: 'varios',
     material: 'multi-ingrediente',
     sizes: [
       { label: '3kg', available: true },
@@ -122,8 +122,8 @@ export const products: Product[] = [
     description: 'Aceite de pescado de alta concentracion con 1000mg de EPA y DHA por capsula. Reduce la inflamacion, mejora la salud cardiovascular y el rendimiento cognitivo. Certificado libre de metales pesados.',
     price: 22000,
     currency: 'ARS',
-    category: 'vitaminas',
-    material: 'aceite de pescado',
+    category: 'varios',
+    material: 'varios',
     sizes: [
       { label: '60 caps',  available: true },
       { label: '120 caps', available: true },

@@ -15,8 +15,8 @@ export function Home() {
   const { addItem } = useCart()
 
   useEffect(function() {
-    function handleFilter(e) {
-      setActiveCategory(e.detail)
+    function handleFilter(e: Event) { const detail = (e as CustomEvent).detail; setActiveCategory(detail);
+      // handled above
     }
     window.addEventListener('filter-category', handleFilter)
     return function() { window.removeEventListener('filter-category', handleFilter) }
