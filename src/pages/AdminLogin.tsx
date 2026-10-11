@@ -11,7 +11,7 @@ export function AdminLogin() {
 
   function handleLogin() {
     if (user === 'suplemars' && pass === '1234') {
-      localStorage.setItem('ricatipa_admin', 'true')
+      localStorage.setItem('suplemars_admin', 'true')
       navigate('/admin/panel')
     } else {
       setError(true)
@@ -24,7 +24,7 @@ export function AdminLogin() {
 
         <div className="text-center mb-10">
           <h1 className="font-display text-4xl font-light tracking-widest text-ink mb-2">
-            RICATIPA
+            Suplemars
           </h1>
           <p className="font-sans text-[10px] tracking-widest uppercase text-stone">
             Panel de administración

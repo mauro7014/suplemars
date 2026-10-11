@@ -58,7 +58,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-sans text-[10px] tracking-wider text-stone uppercase">
-            {year} Ricatipa - Todos los derechos reservados
+            {year} CommerceFlux - Todos los derechos reservados
           </p>
           <nav className="flex flex-wrap justify-center gap-4 md:gap-6">
             {legal.map(function(l) {

@@ -13,7 +13,7 @@ import { useState } from 'react'
 import type { ReactNode } from 'react'
 
 function ProtectedRoute({ children }: { children: ReactNode }) {
-  const isAdmin = localStorage.getItem('ricatipa_admin') === 'true'
+  const isAdmin = localStorage.getItem('suplemars_admin') === 'true'
   return isAdmin ? <>{children}</> : <Navigate to="/admin" replace />
 }
 

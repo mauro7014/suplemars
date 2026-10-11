@@ -112,7 +112,7 @@ export function AdminPanel() {
   const [saved, setSaved] = useState(false)
 
   function handleLogout() {
-    localStorage.removeItem('ricatipa_admin')
+    localStorage.removeItem('suplemars_admin')
     navigate('/admin')
   }
 
@@ -149,7 +149,7 @@ export function AdminPanel() {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-ink text-linen px-6 h-14 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="font-display text-lg tracking-widest">RICATIPA</span>
+          <span className="font-display text-lg tracking-widest">Suplemars</span>
           <span className="font-sans text-[9px] tracking-widest uppercase text-linen/40">Admin</span>
         </div>
         <div className="flex items-center gap-4">
