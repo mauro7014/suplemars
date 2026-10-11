@@ -4,6 +4,7 @@ import { Footer } from './components/layout/Footer'
 import { Home } from './pages/Home'
 import { Materiales } from './pages/Materiales'
 import { Nosotras } from './pages/Nosotras'
+import { Categoria } from './pages/Categoria'
 import { AdminLogin } from './pages/AdminLogin'
 import { AdminPanel } from './pages/AdminPanel'
 import { WhatsAppButton } from './components/ui/WhatsAppButton'
@@ -19,9 +20,9 @@ function ProtectedRoute({ children }: { children: ReactNode }) {
 function ShopLayout({ children }: { children: ReactNode }) {
   const [cartOpen, setCartOpen] = useState(false)
   return (
-    <div className="min-h-screen flex flex-col bg-linen">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#111111' }}>
       <Header onCartOpen={function() { setCartOpen(true) }} />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         {children}
       </main>
       <Footer />
@@ -36,6 +37,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<ShopLayout><Home /></ShopLayout>} />
+        <Route path="/categoria/:slug" element={<ShopLayout><Categoria /></ShopLayout>} />
         <Route path="/materiales" element={<ShopLayout><Materiales /></ShopLayout>} />
         <Route path="/nosotras" element={<ShopLayout><Nosotras /></ShopLayout>} />
         <Route path="/admin" element={<AdminLogin />} />
