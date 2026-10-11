@@ -10,7 +10,7 @@ export function AdminLogin() {
   const [error, setError] = useState(false)
 
   function handleLogin() {
-    if (user === 'romiripa' && pass === 'coco1010') {
+    if (user === 'suplemars' && pass === '1234') {
       localStorage.setItem('ricatipa_admin', 'true')
       navigate('/admin/panel')
     } else {
