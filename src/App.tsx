@@ -5,6 +5,7 @@ import { Home } from './pages/Home'
 import { Materiales } from './pages/Materiales'
 import { Nosotras } from './pages/Nosotras'
 import { Categoria } from './pages/Categoria'
+import { Checkout } from './pages/Checkout'
 import { AdminLogin } from './pages/AdminLogin'
 import { AdminPanel } from './pages/AdminPanel'
 import { WhatsAppButton } from './components/ui/WhatsAppButton'
@@ -38,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ShopLayout><Home /></ShopLayout>} />
         <Route path="/categoria/:slug" element={<ShopLayout><Categoria /></ShopLayout>} />
+        <Route path="/checkout" element={<ShopLayout><Checkout /></ShopLayout>} />
         <Route path="/materiales" element={<ShopLayout><Materiales /></ShopLayout>} />
         <Route path="/nosotras" element={<ShopLayout><Nosotras /></ShopLayout>} />
         <Route path="/admin" element={<AdminLogin />} />
